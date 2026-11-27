@@ -1,0 +1,501 @@
+
+/* ==============================
+   GUJARAT FESTIVAL TRACKER
+   PREMIUM DESIGN SYSTEM
+================================= */
+
+:root {
+    --primary: #c65d32;
+    --primary-dark: #9e4323;
+    --cream: #faf7f0;
+    --white: #ffffff;
+    --dark: #25251f;
+    --muted: #85847b;
+    --border: #eae5dc;
+    --green: #637c55;
+    --sidebar-width: 255px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ==============================
+   MAIN LAYOUT
+================================= */
+
+.app-layout {
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-right: 1px solid var(--border);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.main-area {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+}
+
+.content-area {
+    padding: 36px 45px;
+}
+
+/* ==============================
+   BRAND
+================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 42px;
+}
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+    background: var(--primary);
+    color: white;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+}
+
+.brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    letter-spacing: -0.5px;
+}
+
+.brand small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* ==============================
+   SIDEBAR NAVIGATION
+================================= */
+
+.menu-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #aaa59b;
+    margin: 0 0 15px 10px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 13px;
+    border-radius: 10px;
+    color: #69685f;
+    font-size: 13px;
+    transition: 0.25s ease;
+}
+
+.nav-link span {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+.nav-link:hover {
+    background: #faf2ec;
+    color: var(--primary);
+}
+
+.nav-link.active {
+    background: #f8eee7;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-note {
+    background: #f9f4e9;
+    padding: 17px;
+    border-radius: 13px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sidebar-note > span {
+    color: var(--primary);
+    font-size: 19px;
+}
+
+.sidebar-note p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #767166;
+}
+
+/* ==============================
+   TOP BAR
+================================= */
+
+.topbar {
+    min-height: 94px;
+    background: rgba(255,255,255,0.9);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.topbar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.topbar-badge {
+    padding: 10px 15px;
+    background: #f5f3eb;
+    border-radius: 30px;
+    font-size: 11px;
+    color: #66685a;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #82956b;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* ==============================
+   WELCOME SECTION
+================================= */
+
+.welcome-section {
+    min-height: 570px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 35px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.welcome-text {
+    padding: 20px 0;
+}
+
+.welcome-tag {
+    display: inline-block;
+    background: #f4e8db;
+    color: var(--primary);
+    padding: 9px 13px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    margin-bottom: 25px;
+}
+
+.welcome-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.welcome-text h1 span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.welcome-text > p {
+    max-width: 490px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* ==============================
+   WELCOME STATS
+================================= */
+
+.welcome-stats {
+    display: flex;
+    gap: 28px;
+    border-top: 1px solid var(--border);
+    margin-top: 38px;
+    padding-top: 24px;
+}
+
+.welcome-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.welcome-stats h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--dark);
+}
+
+.welcome-stats span {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+/* ==============================
+   WELCOME IMAGE
+================================= */
+
+.welcome-visual {
+    position: relative;
+    min-height: 460px;
+}
+
+.welcome-image {
+    min-height: 460px;
+    width: 100%;
+    border-radius: 180px 180px 22px 22px;
+    background:
+        linear-gradient(to top, rgba(43,25,12,0.25), transparent 50%),
+        url('images/gujarat-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #e4c6a3;
+    box-shadow: 0 25px 60px rgba(84, 54, 28, 0.12);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 30px;
+    left: -25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 14px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+.floating-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #f7eee4;
+    color: var(--primary);
+    font-size: 23px;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.floating-card small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* ==============================
+   ANIMATIONS
+================================= */
+
+.welcome-text,
+.welcome-visual {
+    animation: fadeUp 0.8s ease both;
+}
+
+.welcome-visual {
+    animation-delay: 0.15s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1100px) {
+    .content-area {
+        padding: 28px;
+    }
+
+    .topbar {
+        padding: 20px 28px;
+    }
+
+    .welcome-section {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-visual {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        padding: 18px 20px;
+    }
+
+    .topbar h3 {
+        font-size: 17px;
+    }
+
+    .topbar-badge {
+        display: none;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .welcome-text h1 {
+        font-size: 43px;
+    }
+
+    .welcome-section {
+        gap: 25px;
+    }
+
+    .welcome-visual,
+    .welcome-image {
+        min-height: 330px;
+    }
+
+    .welcome-image {
+        border-radius: 130px 130px 18px 18px;
+    }
+
+    .floating-card {
+        left: 8px;
+        bottom: 15px;
+    }
+
+    .welcome-stats {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
